@@ -1,7 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { X } from 'lucide-react'
+import { Truck, ShieldCheck, Sparkles, X } from 'lucide-react'
+
+const messages = [
+  { icon: Truck, text: 'Free shipping on every order — no minimum' },
+  { icon: ShieldCheck, text: 'Perfect-fit guarantee or we remake it free' },
+  { icon: Sparkles, text: 'Made from Zendura® FLX — orthodontist-grade material' },
+]
 
 export default function AnnouncementBar() {
   const [isVisible, setIsVisible] = useState(true)
@@ -10,8 +16,16 @@ export default function AnnouncementBar() {
 
   return (
     <div className="relative bg-foreground text-primary-foreground">
-      <div className="container-custom flex items-center justify-center py-2.5 text-sm tracking-wide">
-        <p>Free shipping on orders over $75 — Shop the new collection</p>
+      <div className="container-custom flex items-center justify-center gap-8 py-2.5 text-xs tracking-wide">
+        {messages.map((m, i) => (
+          <div
+            key={i}
+            className={`items-center gap-2 ${i === 0 ? 'flex' : 'hidden md:flex'}`}
+          >
+            <m.icon className="h-3.5 w-3.5" strokeWidth={2} />
+            <span>{m.text}</span>
+          </div>
+        ))}
         <button
           onClick={() => setIsVisible(false)}
           className="absolute right-4 p-1 hover:opacity-70 transition-opacity"

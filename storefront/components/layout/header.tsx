@@ -82,17 +82,32 @@ export default function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
-              <span className="font-heading text-2xl font-semibold tracking-tight">
-                Store
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 7c0-1 1-2 2-2h10c1 0 2 1 2 2 0 6-3 12-7 12s-7-6-7-12Z" />
+                  <path d="M9 9h6" />
+                </svg>
+              </span>
+              <span className="font-heading text-xl font-semibold tracking-tight">
+                AlignFit
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               <Link href="/products" className="text-sm tracking-wide uppercase link-underline py-1" prefetch={true}>
-                Shop All
+                Shop
               </Link>
-              {collections?.slice(0, 4).map((collection: any) => (
+              <Link href="/products/custom-clear-retainer-upper-lower-set" className="text-sm tracking-wide uppercase link-underline py-1" prefetch={true}>
+                Retainers
+              </Link>
+              <Link href="/products/the-2-year-starter-kit-2-sets-cleaning-crystals-travel-case" className="text-sm tracking-wide uppercase link-underline py-1" prefetch={true}>
+                2-Year Kit
+              </Link>
+              <Link href="/about" className="text-sm tracking-wide uppercase link-underline py-1" prefetch={true}>
+                How It Works
+              </Link>
+              {collections?.slice(0, 2).map((collection: any) => (
                 <Link
                   key={collection.id}
                   href={`/collections/${collection.handle}`}

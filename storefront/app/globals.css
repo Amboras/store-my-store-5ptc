@@ -4,16 +4,17 @@
 
 @layer base {
   :root {
-    --background: 40 20% 98%;
-    --foreground: 0 0% 10%;
-    --muted: 40 10% 94%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 35 40% 50%;
+    /* AlignFit — clean, clinical, trustworthy */
+    --background: 200 33% 99%;
+    --foreground: 212 45% 12%;
+    --muted: 200 30% 96%;
+    --muted-foreground: 212 15% 40%;
+    --accent: 174 72% 38%;
     --accent-foreground: 0 0% 100%;
-    --border: 40 10% 88%;
-    --ring: 35 40% 50%;
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --border: 210 20% 90%;
+    --ring: 174 72% 38%;
+    --primary: 212 45% 14%;
+    --primary-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
